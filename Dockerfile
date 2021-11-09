@@ -33,9 +33,8 @@ RUN apt-get update && apt-get install -y sqlite gettext
 
 #get and unpack kafka eagle
 RUN mkdir -p /opt/efak/conf;cd /opt && \
-    wget https://github.com/smartloli/kafka-eagle-bin/archive/v${EFAK_VERSION}.tar.gz && \
-    tar zxvf v${EFAK_VERSION}.tar.gz -C efak --strip-components 1 && \
-    cd efak;tar zxvf efak-web-${EFAK_VERSION}-bin.tar.gz --strip-components 1 && \
+    wget https://github.com/smartloli/kafka-eagle-bin/raw/v{EFAK_VERSION}/kafka-eagle-web-{EFAK_VERSION}-bin.tar.gz && \
+    tar zxvf efak-web-${EFAK_VERSION}-bin.tar.gz --strip-components 1 && \
     rm efak-web-${EFAK_VERSION}-bin.tar.gz && \
     chmod +x /opt/efak/bin/ke.sh
 
