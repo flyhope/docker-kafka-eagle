@@ -1,4 +1,4 @@
-FROM openjdk:8-buster
+FROM openjdk:18-jdk-buster
 
 ENV KE_HOME=/opt/efak
 ENV EFAK_VERSION=2.0.8
