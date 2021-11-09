@@ -32,7 +32,7 @@ ADD entrypoint.sh /usr/bin
 RUN apt-get update && apt-get install -y sqlite gettext
 
 #get and unpack kafka eagle
-RUN mkdir -p /opt/efak/conf;cd /opt && \
+RUN mkdir -p /opt/efak/conf;cd /opt/efak && \
     wget https://github.com/smartloli/kafka-eagle-bin/raw/v${EFAK_VERSION}/kafka-eagle-web-${EFAK_VERSION}-bin.tar.gz && \
     tar zxvf *-bin.tar.gz --strip-components 1 && \
     rm -f *-bin.tar.gz && \
