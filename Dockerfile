@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y sqlite gettext wget && \
     tar zxvf *-bin.tar.gz --strip-components 1 && \
     rm -f *-bin.tar.gz && \
     chmod +x /opt/efak/bin/ke.sh && \
-    chmox +x /usr/bin/entrypoint.sh
+    chmod +x /usr/bin/entrypoint.sh
 
 EXPOSE 8048
 WORKDIR /opt/efak
